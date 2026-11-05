@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Dashboard | RSR Advanced Care Hospital</title>
+  <link rel="shortcut icon" href="logo.jpg">
+  <link rel="stylesheet" href="./style.css?v=53">
+</head>
+<body data-page="dashboard">
+  <header class="patient-dashboard-header">
+    <a class="brand" href="./index.html#home" aria-label="RSR Advanced Care Hospital home">
+      <span class="brand-icon"><img src="logo.jpg" alt=""></span>
+      <span class="brand-name">
+        <strong>RSR ADVANCED CARE HOSPITAL</strong>
+        <small>CARE · TRUST · HEALING</small>
+      </span>
+    </a>
+    <div class="patient-dashboard-header-actions">
+      <a class="patient-dashboard-back" href="./index.html#appointment" aria-label="Back to website" title="Back to website"><span class="patient-dashboard-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7"></path><path d="M5 9v11h14V9"></path><path d="M9 20v-6h6v6"></path></svg></span><span class="patient-dashboard-action-label">Back to website</span></a>
+      <button class="patient-text-button patient-dashboard-sign-out" id="patient-sign-out" type="button" aria-label="Sign out" title="Sign out"><span class="patient-dashboard-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17l5-5-5-5"></path><path d="M15 12H3"></path><path d="M12 3h6a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-6"></path></svg></span><span class="patient-dashboard-action-label">Sign out</span></button>
+    </div>
+  </header>
+
+  <main class="patient-dashboard-main">
+    <div class="patient-dashboard-shell">
+      <div class="patient-dashboard-heading">
+        <span class="section-eyebrow">PATIENT ACCOUNT</span>
+        <h1>Patient Dashboard</h1>
+        <p>Manage your profile and keep track of your appointments.</p>
+      </div>
+
+      <section class="patient-dashboard-auth" id="patient-dashboard-auth">
+        <p class="patient-account-setup-note" id="supabase-setup-note" hidden>
+          Patient accounts need Supabase setup before appointment booking can be used.
+        </p>
+        <div class="patient-auth-forms" id="patient-auth-forms">
+          <form class="patient-auth-form" id="patient-sign-in-form">
+            <h3>Sign in to view your appointments</h3>
+            <label for="patient-sign-in-email">Email address</label>
+            <input id="patient-sign-in-email" type="email" autocomplete="email" placeholder="Enter your email address" required>
+            <label for="patient-sign-in-password">Password</label>
+            <div class="patient-password-input-wrap"><input id="patient-sign-in-password" type="password" autocomplete="current-password" placeholder="Enter your password" required><button class="patient-password-toggle" type="button" aria-label="Show password" aria-controls="patient-sign-in-password" aria-pressed="false"><svg class="password-eye-open" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg><svg class="password-eye-closed" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 3 18 18M10.6 6.2A10.8 10.8 0 0 1 12 6c6.1 0 9.5 6 9.5 6a15 15 0 0 1-3 3.6M6.2 6.5C3.8 8.1 2.5 12 2.5 12s3.4 6 9.5 6c1.3 0 2.4-.3 3.4-.7"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg><span>Show</span></button></div>
+            <button class="patient-auth-submit patient-sign-in-submit" type="submit"><span class="patient-auth-button-spinner" aria-hidden="true"></span><span>Sign in</span></button>
+            <div class="patient-auth-links">
+              <button class="patient-text-button patient-password-reset-button" id="patient-password-reset" type="button"><span class="patient-auth-button-spinner" aria-hidden="true"></span><span>Forgot password?</span></button>
+              <button class="patient-text-button" data-auth-mode="sign-up" type="button">Create account</button>
+            </div>
+          </form>
+
+          <form class="patient-auth-form" id="patient-sign-up-form" hidden>
+            <h3>Create your patient account</h3>
+            <label for="patient-sign-up-name">Full name</label>
+            <input id="patient-sign-up-name" type="text" autocomplete="name" placeholder="Enter your name" required>
+            <label for="patient-sign-up-email">Email address</label>
+            <input id="patient-sign-up-email" type="email" autocomplete="email" placeholder="Enter your email address" required>
+            <label for="patient-sign-up-password">Password</label>
+            <div class="patient-password-input-wrap"><input id="patient-sign-up-password" type="password" autocomplete="new-password" minlength="8" placeholder="Create a password" required><button class="patient-password-toggle" type="button" aria-label="Show password" aria-controls="patient-sign-up-password" aria-pressed="false"><svg class="password-eye-open" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg><svg class="password-eye-closed" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 3 18 18M10.6 6.2A10.8 10.8 0 0 1 12 6c6.1 0 9.5 6 9.5 6a15 15 0 0 1-3 3.6M6.2 6.5C3.8 8.1 2.5 12 2.5 12s3.4 6 9.5 6c1.3 0 2.4-.3 3.4-.7"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg><span>Show</span></button></div>
+            <button class="patient-auth-submit patient-sign-up-submit" type="submit"><span class="patient-auth-button-spinner" aria-hidden="true"></span><span>Create account</span></button>
+            <div class="patient-auth-links">
+              <button class="patient-text-button" data-auth-mode="sign-in" type="button">Back to sign in</button>
+            </div>
+          </form>
+          <p class="patient-auth-status" id="patient-auth-status" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="patient-confirmation-panel" id="patient-confirmation-panel" hidden>
+          <h3>Check your email</h3>
+          <p>We sent a confirmation link to <strong id="patient-confirmation-email"></strong>. Confirm the account, then sign in to continue.</p>
+          <button class="patient-auth-submit patient-resend-confirmation-submit" id="patient-resend-confirmation" type="button"><span class="patient-auth-button-spinner" aria-hidden="true"></span><span>Resend confirmation email</span></button>
+          <p class="patient-auth-status" id="patient-confirmation-status" role="status" aria-live="polite"></p>
+          <button class="patient-text-button" data-auth-mode="sign-in" type="button">Back to sign in</button>
+        </div>
+
+        <div class="patient-confirmation-panel patient-recovery-panel" id="patient-recovery-panel" hidden>
+          <h3>Check your email</h3>
+          <p>We sent a password reset link to <strong id="patient-recovery-email"></strong>. Open the link on this device to verify your request. Then choose Create new password to set and save your password.</p>
+          <button class="patient-auth-submit patient-resend-confirmation-submit" id="patient-resend-recovery" type="button"><span class="patient-auth-button-spinner" aria-hidden="true"></span><span>Resend reset link</span></button>
+          <p class="patient-auth-status" id="patient-recovery-status" role="status" aria-live="polite"></p>
+          <div class="patient-recovery-actions">
+            <button class="patient-text-button" id="patient-recovery-back" type="button">Back to sign in</button>
+            <button class="patient-text-button patient-create-password-link is-waiting" id="patient-create-new-password" type="button" aria-disabled="true">Create new password</button>
+          </div>
+        </div>
+
+        <form class="patient-auth-form" id="patient-new-password-form" hidden>
+          <h3>Choose a new password</h3>
+          <label for="patient-new-password">New password</label>
+          <div class="patient-password-input-wrap"><input id="patient-new-password" type="password" autocomplete="new-password" minlength="8" placeholder="Enter your new password" required><button class="patient-password-toggle" type="button" aria-label="Show password" aria-controls="patient-new-password" aria-pressed="false"><svg class="password-eye-open" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg><svg class="password-eye-closed" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 3 18 18M10.6 6.2A10.8 10.8 0 0 1 12 6c6.1 0 9.5 6 9.5 6a15 15 0 0 1-3 3.6M6.2 6.5C3.8 8.1 2.5 12 2.5 12s3.4 6 9.5 6c1.3 0 2.4-.3 3.4-.7"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg><span>Show</span></button></div>
+          <label for="patient-confirm-password">Confirm new password</label>
+          <div class="patient-password-input-wrap"><input id="patient-confirm-password" type="password" autocomplete="new-password" minlength="8" placeholder="Confirm your new password" required><button class="patient-password-toggle" type="button" aria-label="Show password" aria-controls="patient-confirm-password" aria-pressed="false"><svg class="password-eye-open" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg><svg class="password-eye-closed" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 3 18 18M10.6 6.2A10.8 10.8 0 0 1 12 6c6.1 0 9.5 6 9.5 6a15 15 0 0 1-3 3.6M6.2 6.5C3.8 8.1 2.5 12 2.5 12s3.4 6 9.5 6c1.3 0 2.4-.3 3.4-.7"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg><span>Show</span></button></div>
+          <button class="patient-auth-submit patient-new-password-submit" type="submit"><span class="patient-auth-button-spinner" aria-hidden="true"></span><span>Save new password</span></button>
+        </form>
+      </section>
+
+      <section class="patient-account-content patient-dashboard-content" id="patient-account-content" hidden>
+        <div class="patient-account-identity">
+          <div>
+            <strong id="patient-account-name"></strong>
+          </div>
+        </div>
+
+        <section class="patient-profile-section" aria-labelledby="patient-profile-heading">
+          <div class="patient-dashboard-section-heading">
+            <div><span class="section-eyebrow">YOUR DETAILS</span><h2 id="patient-profile-heading">Patient Profile</h2></div>
+            <button class="patient-profile-edit" id="patient-profile-edit" type="button"><span class="profile-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c0-3.8 3.1-6.5 7-6.5s7 2.7 7 6.5"></path></svg></span> Edit profile</button>
+          </div>
+          <form id="patient-profile-form" class="patient-profile-form">
+            <div class="patient-profile-photo-column">
+              <div class="patient-profile-avatar-frame">
+                <img id="patient-profile-avatar" alt="Patient profile photo" hidden>
+                <span id="patient-profile-avatar-placeholder" aria-hidden="true">👤</span>
+              </div>
+              <label class="patient-profile-upload" id="patient-profile-upload-label" for="patient-profile-photo" hidden>Upload photo</label>
+              <input id="patient-profile-photo" type="file" accept="image/*" hidden disabled>
+              <p class="patient-profile-photo-note">Optional · JPG, PNG or WebP · max 3 MB</p>
+            </div>
+            <div class="patient-profile-fields">
+              <label>Full name<input id="patient-profile-full-name" name="full_name" type="text" maxlength="120" autocomplete="name" required disabled></label>
+              <label>Email address<input id="patient-profile-email" type="email" readonly></label>
+              <label>Phone number<input id="patient-profile-phone" name="phone" type="tel" maxlength="30" autocomplete="tel" disabled></label>
+              <label>Date of birth<input id="patient-profile-date-of-birth" name="date_of_birth" type="date" disabled></label>
+              <label>Gender<select id="patient-profile-gender" name="gender" disabled><option value="">Select</option><option>Female</option><option>Male</option><option>Non-binary</option><option>Prefer not to say</option></select></label>
+              <label>Blood group<select id="patient-profile-blood-group" name="blood_group" disabled><option value="">Select</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>AB+</option><option>AB-</option><option>O+</option><option>O-</option><option>Unknown</option></select></label>
+              <label class="patient-profile-address">Address<textarea id="patient-profile-address" name="address" rows="2" maxlength="300" autocomplete="street-address" disabled></textarea></label>
+              <div class="patient-profile-actions" id="patient-profile-actions" hidden>
+                <button class="patient-auth-submit patient-profile-save-button" type="submit"><span class="patient-profile-save-spinner" aria-hidden="true"></span><span>Save profile</span></button>
+                <button class="patient-text-button patient-profile-cancel-button" id="patient-profile-cancel" type="button"><svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="m6 6 8 8M14 6l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Cancel</span></button>
+              </div>
+              <p class="patient-auth-status" id="patient-profile-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </section>
+
+        <div class="patient-account-tabs" role="tablist" aria-label="Patient account views">
+          <button class="patient-account-tab is-active" id="patient-appointments-tab" type="button" role="tab" aria-selected="true">My Appointments</button>
+          <button class="patient-account-tab" id="patient-slip-tab" type="button" role="tab" aria-selected="false">Appointment Slip</button>
+          <button class="patient-account-tab" id="patient-notifications-tab" type="button" role="tab" aria-selected="false">Notifications <span class="notification-tab-count" id="patient-notifications-tab-count" hidden>0</span></button>
+          <button class="patient-account-tab" id="patient-following-tab" type="button" role="tab" aria-selected="false">Following <span class="notification-tab-count patient-following-count" id="patient-following-count" hidden>0</span></button>
+        </div>
+        <section class="patient-account-view" id="patient-appointments-view" role="tabpanel" aria-labelledby="patient-appointments-tab">
+          <section class="patient-appointment-group" aria-labelledby="patient-upcoming-heading">
+            <div class="patient-dashboard-section-heading"><div><span class="section-eyebrow">NEXT IN YOUR CARE</span><h2 id="patient-upcoming-heading">Upcoming Appointments</h2></div></div>
+            <div class="patient-appointments-list" id="patient-upcoming-appointments"><p class="patient-empty-state">Your upcoming appointments will appear here.</p></div>
+          </section>
+          <section class="patient-appointment-group patient-past-group" aria-labelledby="patient-past-heading">
+            <div class="patient-dashboard-section-heading"><div><span class="section-eyebrow">VISIT HISTORY</span><h2 id="patient-past-heading">Past Appointments</h2></div></div>
+            <div class="patient-appointments-list" id="patient-past-appointments"><p class="patient-empty-state">Past appointments will appear here.</p></div>
+          </section>
+        </section>
+        <section class="patient-account-view patient-slip-view" id="patient-slip-view" role="tabpanel" aria-labelledby="patient-slip-tab" hidden>
+          <div class="patient-dashboard-section-heading">
+            <div><span class="section-eyebrow">YOUR BOOKING DOCUMENT</span><h2>Appointment Slip</h2></div>
+          </div>
+          <p class="patient-slip-intro">Enter the Application ID from your appointment to view, download the one-page JPG, or print its slip.</p>
+          <form class="patient-slip-lookup" id="patient-slip-lookup-form">
+            <label for="patient-slip-application-id">Application ID</label>
+            <div class="patient-slip-lookup-row">
+              <input id="patient-slip-application-id" name="application_id" type="text" inputmode="text" autocomplete="off" placeholder="Example: RSR-ABC123..." required>
+              <button class="patient-auth-submit patient-slip-track-submit" id="patient-slip-track-button" type="submit"><span class="patient-auth-button-spinner" aria-hidden="true"></span><span>Track application</span></button>
+            </div>
+          </form>
+          <p class="patient-slip-status" id="patient-slip-status" role="status" aria-live="polite"></p>
+          <div class="patient-slip-preview" id="patient-slip-preview" hidden></div>
+        </section>
+        <section class="patient-account-view" id="patient-following-view" role="tabpanel" aria-labelledby="patient-following-tab" hidden>
+          <div class="patient-dashboard-section-heading"><div><span class="section-eyebrow">YOUR DOCTORS</span><h2>Followed Doctors</h2></div></div>
+          <div class="patient-following-list" id="patient-following-list"><p class="patient-empty-state">Doctors you follow will appear here.</p></div>
+        </section>
+        <section class="patient-account-view" id="patient-notifications-view" role="tabpanel" aria-labelledby="patient-notifications-tab" hidden>
+          <div class="patient-notifications-list" id="patient-notifications-list"><p class="patient-empty-state">No appointment notifications yet.</p></div>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./supabase-config.js?v=2"></script>
+  <script src="./supabase-auth.js?v=63"></script>
+</body>
+</html>
