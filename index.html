@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSR Advanced Care Hospital | @coding.ratno</title>
+  <link rel="shortcut icon" href="logo.jpg">
+  <link rel="stylesheet" href="./style.css?v=52">
+</head>
+<body>
+
+  <div class="top-bar">
+    <p>Compassionate care, close to home</p>
+    <a href="tel:+911000000000">Emergency: +91 1000000000</a>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="RSR Advanced Care Hospital home">
+      <span class="brand-icon">
+        <img src="logo.jpg" alt="">
+      </span>
+      <span class="brand-name">
+        <strong>RSR ADVANCED CARE HOSPITAL</strong>
+        <small>CARE · TRUST · HEALING</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#departments">Departments</a>
+      <a href="#doctors">Doctors</a>
+      <a href="#appointment">Appointment</a>
+      <a href="#find-care">Find Care Near You</a>
+      <a class="emergency-link" href="#emergency">Emergency</a>
+      <a href="#contact">Contact</a>
+      <button class="patient-nav-button" id="patient-account-button" type="button" data-close-mobile-nav>
+        <span class="profile-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c0-3.8 3.1-6.5 7-6.5s7 2.7 7 6.5"></path></svg></span> My Profile
+      </button>
+</nav>
+    <div class="patient-notification-wrap" id="patient-notification-wrap">
+        <button
+          class="patient-notification-button"
+          id="patient-notification-button"
+          type="button"
+          aria-label="Appointment notifications"
+          aria-haspopup="dialog"
+          aria-expanded="false"
+          aria-controls="patient-notification-popover"
+        >
+          <span aria-hidden="true">🔔</span>
+          <span class="notification-count" id="appointment-notification-count" hidden>0</span>
+        </button>
+        <section class="patient-notification-popover" id="patient-notification-popover" aria-label="Appointment notifications" hidden>
+          <h2>Notifications</h2>
+          <div class="patient-notifications-list" id="patient-header-notification-list">
+            <p class="patient-empty-state">Sign in to see your appointment notifications.</p>
+          </div>
+        </section>
+      </div>
+
+    <a class="book-button" href="#appointment">
+      Book Appointment <span>↗</span>
+    </a>
+  </header>
+
+  <main id="home">
+
+    <!-- Home / Hero Section -->
+    <section class="hero-section">
+      <div class="hero-bg-carousel">
+        <div class="hero-bg-slides">
+          <div class="hero-bg-slide">
+            <img
+              src="hospital.jpeg"
+              alt=""
+            >
+          </div>
+
+          <div class="hero-bg-slide">
+            <img
+              src="photo.jpg"
+              alt=""
+            >
+          </div>
+
+          <div class="hero-bg-slide">
+            <img
+              src="photo2.jpg"
+              alt=""
+            >
+          </div>
+
+          <div class="hero-bg-slide">
+            <img
+              src="photo3.jpg"
+              alt=""
+            >
+          </div>
+
+          
+        </div>
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <span class="hero-label">WELCOME TO RSR ADVANCED CARE HOSPITAL</span>
+        <h1>Expert care.<br><em>Made personal.</em></h1>
+
+        <p>
+          Find the right doctor, explore our departments, and book your visit —
+          all in one place.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="hero-button primary-button" href="#appointment">
+            Book an Appointment <span>↗</span>
+          </a>
+
+          <a class="hero-button secondary-button" href="#find-care">
+            Find Care Near You <span aria-hidden="true">⌖</span>
+          </a>
+
+          <a class="hero-button emergency-button" href="tel:+911000000000">
+            <span>☎</span> Emergency Help
+          </a>
+
+          <a class="hero-button secondary-button" href="#departments">
+            Explore Departments
+          </a>
+        </div>
+
+        <div class="hero-note">
+          <span class="note-icon">✚</span>
+          <span>Thoughtful care, made easier to find</span>
+        </div>
+      </div>
+
+      <div class="hero-bg-dots" aria-label="Choose a photo">
+        <button type="button" class="hero-bg-dot active" aria-label="Show photo 1"></button>
+        <button type="button" class="hero-bg-dot" aria-label="Show photo 2"></button>
+        <button type="button" class="hero-bg-dot" aria-label="Show photo 3"></button>
+        <button type="button" class="hero-bg-dot" aria-label="Show photo 4"></button>
+      </div>
+
+      <div class="image-caption">
+        <span class="caption-icon">♡</span>
+        <span>
+          <strong>Your health matters</strong>
+          <small>Care and support for every step</small>
+        </span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="about-container">
+        <div class="about-intro">
+          <div class="about-photo">
+            <img
+              src="hospital.jpeg"
+              alt="Hospital care team"
+            >
+            <div class="photo-label">
+              <span>✚</span>
+              <div>
+                <strong>Care with compassion</strong>
+                <small>Here for patients and families</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-copy">
+            <span class="about-eyebrow">ABOUT OUR HOSPITAL</span>
+            <h2>Care built around <em>people.</em></h2>
+            <p>
+              Every patient deserves to feel heard, respected, and supported.
+              RSR Advanced Care Hospital brings essential care information together
+              so patients and families can explore services and plan their next step.
+            </p>
+            <a class="about-cta" href="#departments">
+              Explore our departments <span>↗</span>
+            </a>
+          </div>
+        </div>
+        <section class="about-patient-portal" aria-labelledby="about-patient-portal-heading">
+          <div class="about-patient-portal-intro">
+            <span class="about-eyebrow">YOUR CARE, IN ONE PLACE</span>
+            <h2 id="about-patient-portal-heading">A simpler way to <em>stay connected.</em></h2>
+            <p>Use the patient portal to keep track of your appointment requests and the details you need for your visit.</p>
+            <button class="about-portal-cta" id="about-patient-account-button" type="button">
+              Open patient account <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <div class="about-patient-portal-features">
+            <article class="about-portal-feature">
+              <span class="about-portal-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7 3v3m10-3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13H4V6a1 1 0 0 1 1-1Z"/><path d="m9 14 2 2 4-4"/></svg></span>
+              <div><h3>Request an appointment</h3><p>Choose a department, doctor, and preferred visit time.</p></div>
+            </article>
+            <article class="about-portal-feature">
+              <span class="about-portal-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M7 8h10M7 12h6m-6 4h4"/></svg></span>
+              <div><h3>Keep track of requests</h3><p>See upcoming visits and review past appointment details.</p></div>
+            </article>
+            <article class="about-portal-feature">
+              <span class="about-portal-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h12a2 2 0 0 1 2 2v16l-8-4-8 4V5a2 2 0 0 1 2-2Z"/><path d="M9 8h6m-6 4h6"/></svg></span>
+              <div><h3>Keep visit details handy</h3><p>Find your appointment slip and account updates when you need them.</p></div>
+            </article>
+          </div>
+        </section>
+        <!-- About Section Statistics -->
+<div class="about-stats">
+  <article class="about-stat-card">
+    <strong class="about-stat-number">50+</strong>
+    <span>Hospital Outlets</span>
+  </article>
+
+  <article class="about-stat-card">
+    <strong class="about-stat-number">160+</strong>
+    <span>Doctors</span>
+  </article>
+
+  <article class="about-stat-card">
+    <strong class="about-stat-number">18</strong>
+    <span>Departments</span>
+  </article>
+
+  <article class="about-stat-card">
+    <strong class="about-stat-number">15+</strong>
+    <span>Years of Excellence</span>
+  </article>
+</div>
+
+        <div class="about-pillars">
+          <article class="pillar-card">
+            <span class="pillar-number">01</span>
+            <h3>Our Mission</h3>
+            <p>To make healthcare information and support easier to find.</p>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-number">02</span>
+            <h3>Our Approach</h3>
+            <p>To treat patients and families with care, respect, and understanding.</p>
+          </article>
+
+          <article class="pillar-card">
+            <span class="pillar-number">03</span>
+            <h3>What Matters</h3>
+            <p>Clear guidance, thoughtful service, and support at every step.</p>
+          </article>
+        </div>
+
+        <div class="facilities-heading">
+          <div>
+            <span class="about-eyebrow">HOSPITAL FACILITIES</span>
+            <h2>Care and services <em>in one place.</em></h2>
+          </div>
+          <p>Explore the facilities available to patients and visitors.</p>
+        </div>
+
+        <div class="facility-grid">
+          <article class="facility-card">
+            <span class="facility-icon">✚</span>
+            <h3>Emergency Department</h3>
+            <p>Urgent medical care and assistance.</p>
+          </article>
+
+          <article class="facility-card">
+            <span class="facility-icon">▣</span>
+            <h3>Inpatient Wards</h3>
+            <p>Rooms and care for admitted patients.</p>
+          </article>
+
+          <article class="facility-card">
+            <span class="facility-icon">♡</span>
+            <h3>Intensive Care Unit</h3>
+            <p>Specialized monitoring and care for critically ill patients.</p>
+          </article>
+
+          <article class="facility-card">
+            <span class="facility-icon">⚕</span>
+            <h3>Operation Theatres</h3>
+            <p>Dedicated spaces for surgical procedures.</p>
+          </article>
+
+          <article class="facility-card">
+            <span class="facility-icon">⌕</span>
+            <h3>Diagnostic Lab</h3>
+            <p>Laboratory testing services.</p>
+          </article>
+
+          <article class="facility-card">
+            <span class="facility-icon">◉</span>
+            <h3>Imaging Services</h3>
+            <p>Imaging such as X-ray and ultrasound, where available.</p>
+          </article>
+
+          <article class="facility-card">
+            <span class="facility-icon">✣</span>
+            <h3>Pharmacy</h3>
+            <p>Access to medicines and pharmacy services.</p>
+          </article>
+
+          <article class="facility-card">
+            <span class="facility-icon">↗</span>
+            <h3>Ambulance Service</h3>
+            <p>Patient transport and ambulance support.</p>
+          </article>
+
+          <article class="facility-card">
+            <span class="facility-icon">♿</span>
+            <h3>Parking &amp; Accessibility</h3>
+            <p>Visitor parking and access support for patients.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section class="departments-section" id="departments">
+      <div class="departments-container">
+        <div class="departments-heading">
+          <span class="section-eyebrow">SPECIALTY CARE</span>
+          <h2>Our <em>Departments</em></h2>
+          <p>Choose a department to explore its services and specialist doctors.</p>
+        </div>
+
+        <div class="department-grid">
+
+          <!-- These three featured departments appear first: emergency, blood bank, cancer care -->
+          <article class="department-card emergency-department-card">
+            <span class="department-icon">✚</span>
+            <h3>Emergency Care</h3>
+            <p>Information for patients who need urgent medical assistance.</p>
+            <button class="explore-button" data-department="emergency">
+              Emergency Help <span>↗</span>
+            </button>
+          </article>
+
+          <article class="department-card featured-blood-bank-card">
+            <span class="department-badge">BLOOD BANK</span>
+            <span class="department-icon">♥</span>
+            <h3>Blood Bank &amp; Transfusion Services</h3>
+            <p>Contact the blood bank for service information.</p>
+            <button class="explore-button" data-department="blood-bank">
+              Blood Bank Details <span>↗</span>
+            </button>
+          </article>
+
+          <article class="department-card featured-cancer-card">
+            <span class="department-badge">CANCER CARE</span>
+            <span class="department-icon">✚</span>
+            <h3>Oncology / Cancer Care</h3>
+            <p>Information about cancer care and related services.</p>
+            <button class="explore-button" data-department="oncology">
+              Explore Cancer Care <span>↗</span>
+            </button>
+          </article>
+
+          <!-- Five more departments: total of 8 visible at first -->
+          <article class="department-card">
+            <span class="department-icon">✚</span>
+            <h3>General Medicine</h3>
+            <p>Care for common health concerns and general consultations.</p>
+            <button class="explore-button" data-department="general-medicine">
+              Explore Care <span>↗</span>
+            </button>
+          </article>
+
+          <article class="department-card">
+            <span class="department-icon">♡</span>
+            <h3>Cardiology</h3>
+            <p>Consultations and care for heart and circulation concerns.</p>
+            <button class="explore-button" data-department="cardiology">
+              Explore Care <span>↗</span>
+            </button>
+          </article>
+
+          <article class="department-card">
+            <span class="department-icon">✿</span>
+            <h3>Paediatrics</h3>
+            <p>Healthcare consultations for infants, children, and teens.</p>
+            <button class="explore-button" data-department="paediatrics">
+              Explore Care <span>↗</span>
+            </button>
+          </article>
+
+          <article class="department-card">
+            <span class="department-icon">✿</span>
+            <h3>Gynaecology &amp; Obstetrics</h3>
+            <p>Women's health, pregnancy, and maternity consultations.</p>
+            <button class="explore-button" data-department="gynaecology-obstetrics">
+              Explore Care <span>↗</span>
+            </button>
+          </article>
+
+          <article class="department-card">
+            <span class="department-icon">⌁</span>
+            <h3>Orthopaedics</h3>
+            <p>Care for bones, joints, muscles, and movement concerns.</p>
+            <button class="explore-button" data-department="orthopaedics">
+              Explore Care <span>↗</span>
+            </button>
+          </article>
+
+          <!-- Remaining departments appear after View More -->
+          <article class="department-card">
+            <span class="department-icon">⌘</span>
+            <h3>Neurology</h3>
+            <p>Consultations for conditions affecting the brain and nerves.</p>
+            <button class="explore-button" data-department="neurology">
+              Explore Care <span>↗</span>
+            </button>
+          </article>
+
+          <article class="department-card">
+            <span class="department-icon">⚕</span>
+            <h3>General Surgery</h3>
+            <p>Surgical consultations and guidance before and after procedures.</p>
+            <button class="explore-button" data-department="general-surgery">
+              Explore Care <span>↗</span>
+            </button>
+          </article>
+
+          <article class="department-card">
+            <span class="department-icon">❋</span>
+            <h3>Dermatology</h3>
+            <p>Consultations for skin, hair, and nail concerns.</p>
+            <button class="explore-button" data-department="dermatology">
+              Explore Care <span>↗</span>
+            </button>
+          </article>
+
+          <article class="department-card">
+            <span class="department-icon">◉</span>
+            <h3>Ophthalmology</h3>
+            <p>Eye health consultations and vision care.</p>
+            <button class="explore-button" data-department="ophthalmology">
+              Explore Care <span>↗</span>
+            </button>
+          </article>
+
+          <article class="department-card">
+            <span class="department-icon">◖</span>
+            <h3>ENT / Otolaryngology</h3>
+            <p>Care for ear, nose, throat, and related concerns.</p>
+            <button class="explore-button" data-department="ent">
+              Explore Care <span>↗</span>
+            </button>
+          </article>
+
+          <article class="department-card">
+            <span class="department-icon">◌</span>
+            <h3>Gastroenterology &amp; Hepatology</h3>
+            <p>Consultations for digestive and liver health concerns.</p>
+            <button class="explore-button" data-department="gastroenterology">
+              Explore Care <span>↗</span>
+            </button>
+          </article>
+
+          <article class="department-card">
+            <span class="department-icon">◇</span>
+            <h3>Nephrology</h3>
+            <p>Consultations focused on kidney health.</p>
+            <button class="explore-button" data-department="nephrology">
+              Explore Care <span>↗</span>
+            </button>
+          </article>
+
+          <article class="department-card">
+            <span class="department-icon">◉</span>
+            <h3>Pulmonology</h3>
+            <p>Consultations for lung and respiratory health concerns.</p>
+            <button class="explore-button" data-department="pulmonology">
+              Explore Care <span>↗</span>
+            </button>
+          </article>
+
+          <article class="department-card">
+            <span class="department-icon">☼</span>
+            <h3>Psychiatry &amp; Behavioral Health</h3>
+            <p>Mental health consultations and support.</p>
+            <button class="explore-button" data-department="psychiatry">
+              Explore Care <span>↗</span>
+            </button>
+          </article>
+
+          <article class="department-card">
+            <span class="department-icon">◈</span>
+            <h3>Urology</h3>
+            <p>Consultations for urinary and related health concerns.</p>
+            <button class="explore-button" data-department="urology">
+              Explore Care <span>↗</span>
+            </button>
+          </article>
+        </div>
+
+        <button
+          class="view-more-button"
+          id="department-view-more"
+          type="button"
+          aria-expanded="false"
+        >
+          View More Departments
+        </button>
+      </div>
+    </section>
+
+    <!-- Department details popup -->
+    <dialog class="department-dialog" id="department-dialog">
+      <div class="dialog-content">
+        <button class="dialog-close" type="button" aria-label="Close">×</button>
+
+        <span class="section-eyebrow" id="dialog-eyebrow">DEPARTMENT</span>
+        <h2 id="dialog-title"></h2>
+        <p class="dialog-description" id="dialog-description"></p>
+
+        <div class="dialog-services">
+          <h3>Services</h3>
+          <ul id="dialog-service-list"></ul>
+        </div>
+
+        <div class="dialog-doctors" id="dialog-doctors">
+          <h3>Specialist Doctors</h3>
+          <div class="doctor-profile-grid" id="doctor-profile-grid"></div>
+          <p class="booking-note" id="booking-note" aria-live="polite"></p>
+        </div>
+
+        <div class="emergency-dialog-actions" id="emergency-dialog-actions" hidden>
+          <p>If someone needs urgent help, call the hospital emergency team.</p>
+          <a class="call-emergency-button" href="tel:+911000000000">
+            <span class="call-icon">☎</span> Call Emergency
+          </a>
+        </div>
+
+        <div class="blood-bank-dialog-actions" id="blood-bank-dialog-actions" hidden>
+          <p>Call the blood bank for information and assistance.</p>
+          <a class="call-blood-bank-button" href="tel:+911000000000">
+            <span>☎</span> Call Blood Bank
+          </a>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Doctors Section -->
+<section class="doctors-section" id="doctors">
+  <div class="doctors-container">
+
+    <div class="doctors-heading">
+      <span class="section-eyebrow">MEET OUR SPECIALISTS</span>
+      <h2>Our <em>Doctors</em></h2>
+      <p>
+        Search for a doctor by name or department and explore their availability.
+      </p>
+    </div>
+
+    <div class="doctor-search-wrap">
+  <label class="visually-hidden" for="doctor-search">
+    Search by doctor name or department
+  </label>
+
+  <span class="doctor-search-icon" aria-hidden="true">⌕</span>
+
+  <input
+    id="doctor-search"
+    type="search"
+    placeholder="Search by doctor name or department..."
+    autocomplete="off"
+    list="doctor-search-suggestions"
+  >
+
+  <datalist id="doctor-search-suggestions"></datalist>
+</div>
+
+    <p
+      class="doctor-results-message"
+      id="doctor-results-message"
+      aria-live="polite"
+    >
+      Showing doctors
+    </p>
+
+    <div
+      class="doctors-directory-grid"
+      id="doctors-directory-grid"
+      aria-live="polite"
+    >
+      <!-- JavaScript will add 8 doctor cards per page here -->
+    </div>
+
+    <p class="doctor-empty-state" id="doctor-empty-state" hidden>
+      No doctors found. Try another name or department.
+    </p>
+
+    <nav
+      class="doctor-pagination"
+      id="doctor-pagination"
+      aria-label="Doctor directory pages"
+    >
+      <!-- JavaScript will add Previous, page numbers, and Next here -->
+    </nav>
+
+  </div>
+</section>
+<!-- Appointment Section -->
+<section class="appointment-section" id="appointment">
+  <div class="appointment-container">
+
+    <div class="appointment-heading">
+      <span class="section-eyebrow">PLAN YOUR VISIT</span>
+      <h2>Book an <em>Appointment</em></h2>
+      <p>
+        Choose a department, doctor, and preferred visit time.
+      </p>
+    </div>
+
+    <div class="appointment-layout">
+      <div class="appointment-form-card">
+        <form id="appointment-form">
+          <div class="appointment-form-heading">
+            <h3>Appointment Request</h3>
+            <p>Fields marked with * are required.</p>
+          </div>
+
+          <div class="appointment-form-grid">
+            <div class="appointment-field">
+              <label for="appointment-name">Full Name *</label>
+              <input
+                id="appointment-name"
+                name="patientName"
+                type="text"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                required
+              >
+            </div>
+
+            <div class="appointment-field">
+              <label for="appointment-phone">Mobile Number *</label>
+              <input
+                id="appointment-phone"
+                name="phone"
+                type="tel"
+                placeholder="Enter your mobile number"
+                autocomplete="tel"
+                required
+              >
+            </div>
+
+            <div class="appointment-field appointment-field-full">
+              <label for="appointment-email">Email Address *</label>
+              <input
+                id="appointment-email"
+                name="email"
+                type="email"
+                placeholder="name@example.com"
+                autocomplete="email"
+                required
+              >
+            </div>
+
+            <div class="appointment-field">
+              <label for="appointment-department">Department *</label>
+              <select id="appointment-department" name="department" required>
+                <option value="">Select a department</option>
+                <option value="general-medicine">General Medicine</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="paediatrics">Paediatrics</option>
+                <option value="gynaecology-obstetrics">Gynaecology &amp; Obstetrics</option>
+                <option value="orthopaedics">Orthopaedics</option>
+                <option value="neurology">Neurology</option>
+                <option value="general-surgery">General Surgery</option>
+                <option value="dermatology">Dermatology</option>
+                <option value="ophthalmology">Ophthalmology</option>
+                <option value="ent">ENT / Otolaryngology</option>
+                <option value="gastroenterology">Gastroenterology &amp; Hepatology</option>
+                <option value="nephrology">Nephrology</option>
+                <option value="pulmonology">Pulmonology</option>
+                <option value="psychiatry">Psychiatry &amp; Behavioral Health</option>
+                <option value="urology">Urology</option>
+                <option value="oncology">Oncology / Cancer Care</option>
+              </select>
+            </div>
+
+            <div class="appointment-field">
+              <label for="appointment-doctor">Doctor *</label>
+              <select
+                id="appointment-doctor"
+                name="doctor"
+                required
+                disabled
+              >
+                <option value="">Select a department first</option>
+              </select>
+            </div>
+
+            <div class="appointment-field">
+              <label for="appointment-visit-type">Visit Type *</label>
+              <select id="appointment-visit-type" name="visitType" required>
+                <option value="">Select visit type</option>
+                <option value="New Visit">New Visit</option>
+                <option value="Follow-up">Follow-up</option>
+              </select>
+            </div>
+
+            <div class="appointment-field">
+              <label for="appointment-date">Preferred Date *</label>
+              <input
+                id="appointment-date"
+                name="date"
+                type="date"
+                required
+              >
+            </div>
+
+            <div class="appointment-field appointment-field-full">
+              <label for="appointment-time">Doctor's Available Time *</label>
+              <select
+                id="appointment-time"
+                name="time"
+                required
+                disabled
+              >
+                <option value="">Select a doctor first</option>
+              </select>
+              <small
+                class="appointment-availability-note"
+                id="appointment-availability-note"
+                aria-live="polite"
+              ></small>
+            </div>
+
+            <div class="appointment-field appointment-field-full">
+              <label for="appointment-reason">Reason for Visit</label>
+              <textarea
+                id="appointment-reason"
+                name="reason"
+                rows="4"
+                placeholder="Briefly describe the reason for your visit (optional)"
+              ></textarea>
+            </div>
+          </div>
+
+          <button class="appointment-submit-button" type="submit">
+            Book Appointment <span>↗</span>
+          </button>
+
+          <p
+            class="appointment-form-message"
+            id="appointment-form-message"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </div>
+
+      <aside class="appointment-info-card">
+        <span class="appointment-info-icon">✚</span>
+        <span class="section-eyebrow">YOUR VISIT, MADE EASIER</span>
+        <h3>How booking works</h3>
+
+        <ol class="appointment-steps">
+          <li>
+            <span>1</span>
+            <div>
+              <strong>Choose your care</strong>
+              <p>Select the department and doctor that suit your needs.</p>
+            </div>
+          </li>
+          <li>
+            <span>2</span>
+            <div>
+              <strong>Pick a suitable time</strong>
+              <p>Choose a date that matches the doctor's availability.</p>
+            </div>
+          </li>
+          <li>
+            <span>3</span>
+            <div>
+              <strong>Send your request</strong>
+              <p>Complete the form to see your appointment request summary.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="appointment-emergency-note">
+          <strong>Need urgent help?</strong>
+          <p>For emergencies, call the hospital emergency team.</p>
+          <a href="tel:+911000000000">☎ Call Emergency</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+<!-- Find an RSR Outlet -->
+<section class="find-care-section" id="find-care">
+  <div class="find-care-container">
+
+    <div class="find-care-heading">
+      <span class="section-eyebrow">OUR BRANCH NETWORK</span>
+      <h2>Find an RSR Outlet <em>Near You</em></h2>
+      <p>
+        Search by district or state, or use your current location to find
+        the nearest RSR Advanced Care Hospital outlet.
+      </p>
+    </div>
+
+    <div class="find-care-search-card">
+      <form class="location-search-form" id="nearby-location-form">
+        <label for="nearby-location-input">Search by district or state</label>
+
+        <div class="location-search-controls">
+          <input
+            id="nearby-location-input"
+            name="location"
+            type="search"
+            placeholder="For example, Hooghly or Maharashtra"
+            autocomplete="off"
+            list="outlet-location-suggestions"
+            aria-controls="outlet-location-suggestions"
+          >
+
+          <button class="location-search-button" type="submit">
+            Search Outlets <span aria-hidden="true">⌕</span>
+          </button>
+        </div>
+        <datalist id="outlet-location-suggestions"></datalist>
+      </form>
+
+      <div class="location-search-divider">
+        <span>OR</span>
+      </div>
+
+      <button
+        class="current-location-button"
+        id="use-current-location"
+        type="button"
+      >
+        <span class="location-pin-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false">
+            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+            <circle cx="12" cy="10" r="2.5"></circle>
+          </svg>
+        </span>
+        Use My Current Location
+      </button>
+    </div>
+
+    <p
+      class="nearby-search-status"
+      id="nearby-search-status"
+      role="status"
+      aria-live="polite"
+    >
+      Search a district or use your current location to find an RSR outlet.
+    </p>
+
+    <div class="nearby-outlets">
+      <div class="nearby-results-heading">
+        <div>
+          <span class="section-eyebrow">RSR HOSPITAL OUTLETS</span>
+          <h3 id="nearby-results-title">Available Outlets</h3>
+        </div>
+      </div>
+
+      <div
+        class="nearby-hospital-list"
+        id="nearby-hospital-list"
+        aria-live="polite"
+      >
+        <div class="outlet-placeholder">
+          <span aria-hidden="true">✚</span>
+          <strong>Your nearest RSR outlet will appear here</strong>
+          <p>Search a district or state to see its outlet details.</p>
+        </div>
+      </div>
+
+      <p class="nearby-empty-state" id="nearby-empty-state" hidden>
+        No RSR outlet matched that search. Try another district or state.
+      </p>
+    </div>
+
+  </div>
+</section>
+<!-- Emergency Section -->
+<section class="emergency-section" id="emergency" aria-labelledby="emergency-title">
+  <div class="emergency-section-heading">
+  <span>HERE WHEN YOU NEED US</span>
+  <h2>Emergency <em>Care</em></h2>
+</div>
+  <div class="emergency-content">
+    <span class="emergency-label">
+      <span class="emergency-pulse" aria-hidden="true"></span>
+      24/7 EMERGENCY CARE
+    </span>
+
+    <div class="emergency-copy">
+      <h2 id="emergency-title">Need urgent medical help?</h2>
+      <p>Our emergency team is ready to help you.</p>
+    </div>
+
+    <div class="emergency-actions">
+      <a class="emergency-action emergency-call" href="tel:+911000000000">
+        <span aria-hidden="true">☎</span>
+        Call Emergency
+      </a>
+
+      <a class="emergency-action ambulance-call" href="tel:+911000000000">
+        <span aria-hidden="true">✚</span>
+        Ambulance Support
+      </a>
+    </div>
+  </div>
+</section>
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+
+    <div class="contact-heading">
+      <span class="contact-eyebrow">WE’RE HERE TO HELP</span>
+      <h2>Get in <em>Touch</em></h2>
+      <p>
+        Contact our team for appointment enquiries and general information.
+      </p>
+    </div>
+
+    <div class="contact-layout">
+
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p class="contact-info-intro">
+          Reach out to us or visit our main branch.
+        </p>
+
+        <div class="contact-info-item">
+          <span class="contact-info-icon" aria-hidden="true">☎</span>
+          <div>
+            <h4>Phone</h4>
+            <a href="tel:+911000000000">+91 1000000000</a>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="contact-info-icon" aria-hidden="true">✉</span>
+          <div>
+            <h4>Email</h4>
+            <a href="rsradvancedcare@gmail.com">
+              rsradvancedcare@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <span class="contact-info-icon" aria-hidden="true">⌖</span>
+          <div>
+            <h4>Main Branch</h4>
+            <p>Sector V, Salt Lake, Kolkata,<br>West Bengal, India</p>
+          </div>
+        </div>
+
+        <div class="contact-hours">
+          <h4>Opening Hours</h4>
+          <p><span>Appointments</span><strong>Mon–Sat, 9 AM–6 PM</strong></p>
+          <p><span>Emergency Care</span><strong>Open 24/7</strong></p>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contact-form">
+        <h3>Send Us a Message</h3>
+
+        <div class="contact-form-row">
+          <div class="contact-field">
+            <label for="contact-name">Full Name *</label>
+            <input
+              id="contact-name"
+              name="name"
+              type="text"
+              placeholder="Enter your name"
+              autocomplete="name"
+              required
+            >
+          </div>
+
+          <div class="contact-field">
+            <label for="contact-email">Email Address *</label>
+            <input
+              id="contact-email"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+              required
+            >
+          </div>
+        </div>
+
+        <div class="contact-form-row">
+          <div class="contact-field">
+            <label for="contact-phone">Phone Number *</label>
+            <input
+              id="contact-phone"
+              name="phone"
+              type="tel"
+              placeholder="Enter your phone number"
+              autocomplete="tel"
+              required
+            >
+          </div>
+
+          <div class="contact-field">
+            <label for="contact-subject">Subject *</label>
+            <input
+              id="contact-subject"
+              name="subject"
+              type="text"
+              placeholder="How can we help?"
+              required
+            >
+          </div>
+        </div>
+
+        <div class="contact-field">
+          <label for="contact-message">Message *</label>
+          <textarea
+            id="contact-message"
+            name="message"
+            rows="5"
+            placeholder="Write your message..."
+            required
+          ></textarea>
+        </div>
+
+        <button class="contact-submit-button" type="submit">
+          Send Message <span aria-hidden="true">↗</span>
+        </button>
+
+        <p class="contact-form-note" id="contact-form-note" role="status" aria-live="polite"></p>
+      </form>
+
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="footer-brand-link" href="#home" aria-label="RSR Advanced Care Hospital home">
+          <img
+            class="footer-logo"
+            src="logo.jpg"
+            alt="RSR Advanced Care Hospital logo"
+          >
+          <span>RSR Advanced Care Hospital</span>
+        </a>
+
+        <p>
+          Compassionate care and trusted medical support for every step
+          of your health journey.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#departments">Departments</a>
+        <a href="#doctors">Doctors</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Patient Resources</h3>
+        <a href="#appointment">Book an Appointment</a>
+        <a href="#find-care">Find Care Near You</a>
+        <a href="#emergency">Emergency Care</a>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h3>Contact</h3>
+        <a href="tel:+911000000000">+91 1000000000</a>
+        <a href="rsradvancedcare@gmail.com">
+          rsradvancedcare@gmail.com
+        </a>
+        <p>Sector V, Salt Lake,<br>Kolkata, West Bengal, India</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 RSR Advanced Care Hospital. All rights reserved.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+
+  </div>
+</footer>
+  </main>
+
+  <dialog class="patient-account-dialog" id="patient-account-dialog" aria-labelledby="patient-account-title">
+    <div class="patient-account-panel">
+      <aside class="patient-auth-aside" aria-label="RSR Advanced Care Hospital patient portal">
+        <div class="patient-auth-brand">
+          <span class="patient-auth-brand-logo"><img src="logo.jpg" alt=""></span>
+          <span class="patient-auth-brand-copy"><strong>RSR Advanced Care Hospital</strong><small>Patient portal</small></span>
+        </div>
+        <div class="patient-auth-aside-message">
+          <span class="patient-auth-aside-kicker">CARE, MADE PERSONAL</span>
+          <h2>Care that puts you first.</h2>
+          <p>Keep your appointments, profile, and visit details together in one secure place.</p>
+        </div>
+        <div class="patient-auth-aside-footer"><span aria-hidden="true">✦</span> Care · Trust · Healing</div>
+      </aside>
+      <div class="patient-account-main">
+      <header class="patient-account-header">
+        <div class="patient-auth-heading">
+          <span class="patient-auth-heading-kicker">PATIENT ACCOUNT</span>
+          <h2 id="patient-account-title">Welcome back</h2>
+        </div>
+        <button class="patient-account-close" id="patient-account-close" type="button" aria-label="Close account">×</button>
+      </header>
+
+      <p class="patient-account-setup-note" id="supabase-setup-note" hidden>
+        Patient accounts need Supabase setup before appointment booking can be used.
+      </p>
+
+      <div class="patient-auth-forms" id="patient-auth-forms">
+        <div class="patient-auth-mode-tabs" id="patient-auth-mode-tabs" role="tablist" aria-label="Choose sign in or create account">
+          <button class="patient-auth-mode-tab is-active" id="patient-sign-in-tab" type="button" role="tab" aria-selected="true" data-auth-mode="sign-in"><span>Sign in</span></button>
+          <button class="patient-auth-mode-tab" id="patient-sign-up-tab" type="button" role="tab" aria-selected="false" data-auth-mode="sign-up"><span>Create account</span></button>
+        </div>
+        <form class="patient-auth-form" id="patient-sign-in-form">
+          <h3>Welcome back</h3>
+          <p class="patient-auth-form-intro">Sign in to manage your appointments and patient profile.</p>
+          <label for="patient-sign-in-email">Email address</label>
+          <input id="patient-sign-in-email" type="email" autocomplete="email" placeholder="Enter your email address" required>
+          <label for="patient-sign-in-password">Password</label>
+          <div class="patient-password-input-wrap"><input id="patient-sign-in-password" type="password" autocomplete="current-password" placeholder="Enter your password" required><button class="patient-password-toggle" type="button" aria-label="Show password" aria-controls="patient-sign-in-password" aria-pressed="false"><svg class="password-eye-open" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg><svg class="password-eye-closed" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 3 18 18M10.6 6.2A10.8 10.8 0 0 1 12 6c6.1 0 9.5 6 9.5 6a15 15 0 0 1-3 3.6M6.2 6.5C3.8 8.1 2.5 12 2.5 12s3.4 6 9.5 6c1.3 0 2.4-.3 3.4-.7"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg><span>Show</span></button></div>
+          <button class="patient-auth-submit patient-sign-in-submit" type="submit"><span class="patient-auth-button-spinner" aria-hidden="true"></span><span>Sign in</span></button>
+          <div class="patient-auth-links">
+            <button class="patient-text-button patient-password-reset-button" id="patient-password-reset" type="button"><span class="patient-auth-button-spinner" aria-hidden="true"></span><span>Forgot password?</span></button>
+          </div>
+        </form>
+
+        <form class="patient-auth-form" id="patient-sign-up-form" hidden>
+          <h3>Create your account</h3>
+          <p class="patient-auth-form-intro">Join us to book visits and keep your care details together.</p>
+          <label for="patient-sign-up-name">Full name</label>
+          <input id="patient-sign-up-name" type="text" autocomplete="name" placeholder="Enter your name" required>
+          <label for="patient-sign-up-email">Email address</label>
+          <input id="patient-sign-up-email" type="email" autocomplete="email" placeholder="Enter your email address" required>
+          <label for="patient-sign-up-password">Password</label>
+          <div class="patient-password-input-wrap"><input id="patient-sign-up-password" type="password" autocomplete="new-password" minlength="8" placeholder="Create a password" required><button class="patient-password-toggle" type="button" aria-label="Show password" aria-controls="patient-sign-up-password" aria-pressed="false"><svg class="password-eye-open" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg><svg class="password-eye-closed" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 3 18 18M10.6 6.2A10.8 10.8 0 0 1 12 6c6.1 0 9.5 6 9.5 6a15 15 0 0 1-3 3.6M6.2 6.5C3.8 8.1 2.5 12 2.5 12s3.4 6 9.5 6c1.3 0 2.4-.3 3.4-.7"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg><span>Show</span></button></div>
+          <button class="patient-auth-submit patient-sign-up-submit" type="submit"><span class="patient-auth-button-spinner" aria-hidden="true"></span><span>Create account</span></button>
+        </form>
+        <p class="patient-auth-status" id="patient-auth-status" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="patient-confirmation-panel" id="patient-confirmation-panel" hidden>
+        <h3>Check your email</h3>
+        <p>We sent a confirmation link to <strong id="patient-confirmation-email"></strong>. Open the link to verify your email and sign in automatically. You’ll return to the website when it’s complete.</p>
+        <button class="patient-auth-submit patient-resend-confirmation-submit" id="patient-resend-confirmation" type="button"><span class="patient-auth-button-spinner" aria-hidden="true"></span><span>Resend confirmation email</span></button>
+        <p class="patient-auth-status" id="patient-confirmation-status" role="status" aria-live="polite"></p>
+        <button class="patient-text-button" data-auth-mode="sign-in" type="button">Back to sign in</button>
+      </div>
+
+      <div class="patient-confirmation-panel patient-recovery-panel" id="patient-recovery-panel" hidden>
+        <h3>Check your email</h3>
+        <p>We sent a password reset link to <strong id="patient-recovery-email"></strong>. Open the link on this device to verify your request. Then choose Create new password to set and save your password.</p>
+        <button class="patient-auth-submit patient-resend-confirmation-submit" id="patient-resend-recovery" type="button"><span class="patient-auth-button-spinner" aria-hidden="true"></span><span>Resend reset link</span></button>
+        <p class="patient-auth-status" id="patient-recovery-status" role="status" aria-live="polite"></p>
+        <div class="patient-recovery-actions">
+          <button class="patient-text-button" id="patient-recovery-back" type="button">Back to sign in</button>
+          <button class="patient-text-button patient-create-password-link is-waiting" id="patient-create-new-password" type="button" aria-disabled="true">Create new password</button>
+        </div>
+      </div>
+
+      <form class="patient-auth-form" id="patient-new-password-form" hidden>
+        <h3>Choose a new password</h3>
+        <label for="patient-new-password">New password</label>
+        <div class="patient-password-input-wrap"><input id="patient-new-password" type="password" autocomplete="new-password" minlength="8" placeholder="Enter your new password" required><button class="patient-password-toggle" type="button" aria-label="Show password" aria-controls="patient-new-password" aria-pressed="false"><svg class="password-eye-open" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg><svg class="password-eye-closed" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 3 18 18M10.6 6.2A10.8 10.8 0 0 1 12 6c6.1 0 9.5 6 9.5 6a15 15 0 0 1-3 3.6M6.2 6.5C3.8 8.1 2.5 12 2.5 12s3.4 6 9.5 6c1.3 0 2.4-.3 3.4-.7"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg><span>Show</span></button></div>
+        <label for="patient-confirm-password">Confirm new password</label>
+        <div class="patient-password-input-wrap"><input id="patient-confirm-password" type="password" autocomplete="new-password" minlength="8" placeholder="Confirm your new password" required><button class="patient-password-toggle" type="button" aria-label="Show password" aria-controls="patient-confirm-password" aria-pressed="false"><svg class="password-eye-open" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2.5 12s3.4-6 9.5-6 9.5 6 9.5 6-3.4 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg><svg class="password-eye-closed" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 3 18 18M10.6 6.2A10.8 10.8 0 0 1 12 6c6.1 0 9.5 6 9.5 6a15 15 0 0 1-3 3.6M6.2 6.5C3.8 8.1 2.5 12 2.5 12s3.4 6 9.5 6c1.3 0 2.4-.3 3.4-.7"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg><span>Show</span></button></div>
+        <button class="patient-auth-submit patient-new-password-submit" type="submit"><span class="patient-auth-button-spinner" aria-hidden="true"></span><span>Save new password</span></button>
+      </form>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./supabase-config.js?v=2"></script>
+  <script src="./supabase-auth.js?v=63"></script>
+  <script src="./script.js?v=13"></script>
+</body>
+</html>
+
